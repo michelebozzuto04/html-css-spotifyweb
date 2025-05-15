@@ -83,6 +83,7 @@ body {
 
 img {
     max-width: 100%;
+    vertical-align: middle;
 }
 
 /* Debug */
@@ -188,8 +189,13 @@ img {
                 height: 85px;
                 padding: 1rem;
 
-                img {
+                .logo-lg {
                     width: 150px;
+                }
+
+                .logo-sm {
+                    display: none;
+                    width: 80%;
                 }
             }
 
@@ -200,14 +206,36 @@ img {
 
                 .nav-top {
                     li {
+                        display: flex;
+                        align-items: center;
                         height: 35px;
                         padding: 0 1rem;
                     }
 
                     .navigation {
                         a {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
                             text-decoration: none;
-                            color: white;
+                            font-weight: 700;
+                            color: var(--app-color-light);
+
+                            img {
+                                width: 20px;
+                            }
+                        }
+
+                        a:hover {
+                            color: var(--app-color-lighter);
+                        }
+
+                        li:first-of-type {
+                            border-left: 2px solid var(--app-primary-color);
+
+                            a {
+                                color: var(--app-color-lighter);
+                            }
                         }
                     }
                 }
@@ -367,6 +395,21 @@ main {
                 width: 50px;
                 height: 100%;
 
+                .logo {
+                    justify-content: center;
+                    align-items: center;
+                    height: 40px;
+                    padding: 0.5rem 0.4rem;
+
+                    .logo-lg {
+                        display: none;
+                    }
+
+                    .logo-sm {
+                        display: inline-block;
+                    }
+                }
+
                 .playlists {
                     display: none;
                 }
@@ -374,6 +417,33 @@ main {
                 .download-app {
                     a {
                         display: none;
+                    }
+                }
+
+                nav {
+                    .nav-top {
+                        li {
+                            padding: 0.5rem 0.4rem;
+                            height: 40px;
+                        }
+
+                        .navigation {
+                            a {
+                                justify-content: center;
+
+                                span {
+                                    display: none;
+                                }
+
+                                img {
+                                    width: 80%;
+                                }
+                            }
+
+                            li:first-of-type {
+                                border-left: transparent;
+                            }
+                        }
                     }
                 }
             }
