@@ -241,7 +241,7 @@ img {
                     }
 
                     .playlists {
-                        margin: 2rem 0;
+                        margin-top: 2rem;
 
                         h2 {
                             font-size: 1rem;
@@ -272,6 +272,49 @@ img {
                         a {
                             text-decoration: none;
                             color: var(--app-color-light);
+                        }
+                    }
+                }
+
+                .nav-bottom {
+                    padding: 0rem 1rem;
+
+                    .user-profile {
+                        align-items: center;
+                        gap: 8px;
+                        padding: 1rem 0rem;
+
+                        .user-picture {
+                            background-color: var(--bg-secondary-color-lighter);
+                            border-radius: 50%;
+                            overflow: hidden;
+
+                            img {
+                                width: 25px;
+                                height: 25px;
+                            }
+                        }
+
+                        span {
+                            font-weight: 600;
+                        }
+                    }
+
+                    hr {
+                        border: 1px solid #ffffff75;
+                    }
+
+                    .download-app {
+                        padding: 0.5rem 0;
+
+                        a {
+                            text-decoration: none;
+                            color: var(--app-color-light);
+
+                            img {
+                                width: 20px;
+                                opacity: 0.6;
+                            }
                         }
                     }
                 }
