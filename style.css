@@ -27,8 +27,13 @@
                 background-color: blue;
 
                 .logo {
-                    height: 80px;
                     background-color: aqua;
+                }
+
+                nav {
+                    li {
+                        background-color: bisque;
+                    }
                 }
             }
 
@@ -54,6 +59,31 @@
         .left {
             width: 230px;
             height: 100%;
+
+            .logo {
+                height: 85px;
+            }
+
+            nav {
+                flex-direction: column;
+                justify-content: space-between;
+
+
+                li {
+                    height: 35px;
+                }
+
+                .playlists {
+                    span {
+                        background-color: white;
+                    }
+
+                    .create-playlist {
+                        height: 45px;
+                        background-color: azure;
+                    }
+                }
+            }
         }
 
         .right {
