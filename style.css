@@ -31,8 +31,34 @@
                 }
 
                 nav {
-                    li {
-                        background-color: bisque;
+                    .nav-top {
+                        li {
+                            background-color: bisque;
+                            height: 35px;
+                        }
+
+                        .playlists {
+                            span {
+                                background-color: white;
+                            }
+
+                            .create-playlist {
+                                height: 45px;
+                                background-color: azure;
+                            }
+                        }
+                    }
+
+                    .nav-bottom {
+                        .download-app {
+                            height: 20px;
+                            background-color: bisque;
+                        }
+
+                        .user-profile {
+                            height: 40px;
+                            background-color: aquamarine;
+                        }
                     }
                 }
             }
@@ -65,22 +91,13 @@
             }
 
             nav {
+                height: 100%;
                 flex-direction: column;
                 justify-content: space-between;
 
-
-                li {
-                    height: 35px;
-                }
-
-                .playlists {
-                    span {
-                        background-color: white;
-                    }
-
-                    .create-playlist {
-                        height: 45px;
-                        background-color: azure;
+                .nav-top {
+                    li {
+                        height: 35px;
                     }
                 }
             }
