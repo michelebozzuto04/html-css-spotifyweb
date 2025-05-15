@@ -10,3 +10,64 @@
 }
 
 /* Generics */
+
+/* Debug */
+.debug {
+    * {
+        border: 1px dashed black;
+    }
+
+    .wrapper {
+        background-color: red;
+
+        .top {
+            background-color: gray;
+
+            .left {
+                background-color: blue;
+
+                .logo {
+                    height: 80px;
+                    background-color: aqua;
+                }
+            }
+
+            .right {
+                background-color: green;
+            }
+        }
+
+        .bottom {
+            background-color: black;
+        }
+    }
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    .top {
+        height: calc(100% - 70px);
+
+        .left {
+            width: 230px;
+            height: 100%;
+        }
+
+        .right {
+            width: calc(100% - 230px);
+            height: 100%;
+            overflow-y: auto;
+        }
+    }
+
+    .bottom {
+        height: 70px;
+    }
+}
+
+main {
+    color: white;
+}
