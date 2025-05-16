@@ -190,12 +190,12 @@ img {
                 padding: 1rem;
 
                 .logo-lg {
-                    width: 150px;
+                    width: 130px;
                 }
 
                 .logo-sm {
                     display: none;
-                    width: 80%;
+                    width: 28px;
                 }
             }
 
@@ -264,14 +264,26 @@ img {
                             }
 
                             span {
+                                display: flex;
+                                align-items: center;
+                                gap: 8px;
                                 font-weight: 400;
                                 color: var(--app-color-light);
+                            }
+
+                            span:hover {
+                                color: white;
+                                cursor: pointer;
                             }
                         }
 
                         a {
                             text-decoration: none;
                             color: var(--app-color-light);
+                        }
+
+                        a:hover {
+                            color: white;
                         }
                     }
                 }
@@ -315,6 +327,10 @@ img {
                                 width: 20px;
                                 opacity: 0.6;
                             }
+                        }
+
+                        a:hover {
+                            color: var(--app-color-lighter);
                         }
                     }
                 }
@@ -503,25 +519,37 @@ main {
                     .nav-top {
                         li {
                             padding: 0.5rem 0.4rem;
-                            height: 40px;
+                            height: 35px;
+                            justify-content: center;
                         }
 
                         .navigation {
                             a {
-                                justify-content: center;
-
                                 span {
                                     display: none;
-                                }
-
-                                img {
-                                    width: 80%;
                                 }
                             }
 
                             li:first-of-type {
                                 border-left: transparent;
                             }
+                        }
+                    }
+
+                    .nav-bottom {
+                        .user-profile {
+                            .user-picture {
+                                width: 25px;
+                                height: auto;
+                            }
+
+                            span {
+                                display: none;
+                            }
+                        }
+
+                        hr {
+                            display: none;
                         }
                     }
                 }
