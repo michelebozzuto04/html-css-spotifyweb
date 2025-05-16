@@ -509,12 +509,6 @@ main {
                     display: none;
                 }
 
-                .download-app {
-                    a {
-                        display: none;
-                    }
-                }
-
                 nav {
                     .nav-top {
                         li {
@@ -537,11 +531,10 @@ main {
                     }
 
                     .nav-bottom {
+                        padding: 0 0.5rem;
+
                         .user-profile {
-                            .user-picture {
-                                width: 25px;
-                                height: auto;
-                            }
+                            justify-content: center;
 
                             span {
                                 display: none;
@@ -550,6 +543,17 @@ main {
 
                         hr {
                             display: none;
+                        }
+
+                        .download-app {
+                            display: flex;
+                            justify-content: center;
+
+                            a {
+                                span {
+                                    display: none;
+                                }
+                            }
                         }
                     }
                 }
