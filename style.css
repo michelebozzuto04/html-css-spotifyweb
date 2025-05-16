@@ -15,9 +15,18 @@
 }
 
 /* Utilities */
+[class*="col"] {
+    padding: 0rem 0.5rem;
+}
+
+.container {
+    padding: 0rem 1rem;
+}
+
 .row {
     flex-wrap: wrap;
     align-items: stretch;
+    margin: 0 -0.5rem;
 }
 
 .col {
@@ -350,6 +359,22 @@ img {
                 position: sticky;
                 top: 0;
                 left: 0;
+                background-color: rgba(0, 0, 0, 0.5)
+            }
+
+            h2 {
+                padding: 2rem 0rem;
+            }
+
+            .card {
+                .card-body {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 0.6rem;
+                    padding: 1rem 0;
+                    text-align: center;
+                }
             }
 
             .row {
