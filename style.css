@@ -389,6 +389,7 @@ img {
                 top: 0;
                 left: 0;
                 margin-right: 5px;
+                z-index: 1000;
                 background-color: rgba(0, 0, 0, 0.5)
             }
 
@@ -423,6 +424,32 @@ img {
             }
 
             .card {
+
+                .card-header {
+                    position: relative;
+
+                    .card-hover {
+                        display: none;
+                        position: absolute;
+                        justify-content: center;
+                        align-items: center;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        font-size: 2.5rem;
+                        background-color: rgba(0, 0, 0, 0.5);
+                    }
+                }
+
+                .card-header:hover {
+                    cursor: pointer;
+
+                    .card-hover {
+                        display: flex;
+                    }
+                }
+
                 .card-body {
                     display: flex;
                     flex-direction: column;
@@ -485,6 +512,11 @@ img {
         .right {
             width: 100%;
             height: 100%;
+        }
+
+        i:hover {
+            cursor: pointer;
+            color: var(--app-color-lighter);
         }
 
         .left {
@@ -568,6 +600,11 @@ img {
 
                 :nth-of-type(3) {
                     font-size: 2rem;
+                }
+
+                :nth-of-type(3):hover {
+                    scale: 110%;
+                    cursor: pointer;
                 }
             }
 
