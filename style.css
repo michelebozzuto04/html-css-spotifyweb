@@ -763,7 +763,20 @@ main {
                 flex-direction: column;
             }
         }
+
+        .right {
+
+            .player-actions {
+                gap: 8px;
+
+                .slider {
+                    width: 90px;
+                }
+            }
+        }
     }
+
+
 }
 
 @media screen and (max-width: 576px) {
@@ -844,6 +857,25 @@ main {
 
             .right {
                 width: calc(100% - 50px);
+            }
+        }
+
+        .bottom {
+            .left {
+
+                .track-info {
+                    display: none;
+                }
+
+                .track-actions {
+                    margin-left: 0.3rem;
+                }
+            }
+
+            .right {
+                .slider {
+                    display: none;
+                }
             }
         }
     }
