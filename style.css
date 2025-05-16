@@ -85,6 +85,25 @@
     display: flex;
 }
 
+.btn {
+    padding: 0.8rem 2rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.btn:hover {
+    cursor: pointer;
+    scale: 110%;
+}
+
+.btn-outlined {
+    color: var(--app-color-lighter);
+    background-color: transparent;
+    border: 1.5px solid var(--app-color-lighter);
+    border-radius: 30px;
+}
+
 /* Generics */
 body {
     font-family: Arial, Helvetica, sans-serif;
