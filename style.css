@@ -20,7 +20,7 @@
 }
 
 .container {
-    padding: 0rem 1rem;
+    padding: 0rem 1.5rem;
 }
 
 .row {
@@ -362,10 +362,6 @@ img {
                 background-color: rgba(0, 0, 0, 0.5)
             }
 
-            h2 {
-                padding: 2rem 0rem;
-            }
-
             .card {
                 .card-body {
                     display: flex;
@@ -374,11 +370,44 @@ img {
                     gap: 0.6rem;
                     padding: 1rem 0;
                     text-align: center;
+
+                    span {
+                        font-weight: 700;
+                        color: var(--app-color-light);
+                    }
                 }
             }
 
             .row {
                 width: 100%;
+            }
+
+            .recent {
+                h2 {
+                    padding: 2rem 0rem;
+                }
+            }
+
+            .for-you,
+            .artists {
+                margin-top: 2rem;
+
+                h2 {
+                    padding-bottom: 10px;
+                }
+
+                span {
+                    color: var(--app-color-light);
+                    font-weight: 700;
+                }
+
+                .row {
+                    margin-top: 2rem;
+                }
+
+                .artist-picture {
+                    border-radius: 50%;
+                }
             }
         }
     }
