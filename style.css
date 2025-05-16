@@ -23,6 +23,12 @@
     padding: 0rem 1.5rem;
 }
 
+.container-sm {
+    max-width: 768px;
+    width: 95%;
+    margin: 0 auto;
+}
+
 .row {
     flex-wrap: wrap;
     align-items: stretch;
@@ -302,6 +308,10 @@ img {
                             span:hover {
                                 color: white;
                                 cursor: pointer;
+
+                                .add {
+                                    background-color: var(--app-color-lighter);
+                                }
                             }
                         }
 
@@ -378,7 +388,38 @@ img {
                 position: sticky;
                 top: 0;
                 left: 0;
+                margin-right: 5px;
                 background-color: rgba(0, 0, 0, 0.5)
+            }
+
+            .top-menu {
+                padding: 1.4rem 0rem;
+                font-size: 0.8rem;
+
+                .row {
+                    justify-content: center;
+                    row-gap: 1.2rem;
+                }
+
+                .top-menu-content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-transform: uppercase;
+                    color: var(--app-color-light);
+
+                    hr {
+                        margin: 2px 0;
+                        width: 3rem;
+                        border: 1px solid var(--app-primary-color);
+                    }
+
+                    span:hover {
+                        cursor: pointer;
+                        color: var(--app-color-lighter);
+                    }
+                }
             }
 
             .card {
@@ -389,6 +430,7 @@ img {
                     gap: 0.6rem;
                     padding: 1rem 0;
                     text-align: center;
+                    font-size: 0.7rem;
 
                     span {
                         font-weight: 700;
@@ -417,6 +459,7 @@ img {
 
                 span {
                     color: var(--app-color-light);
+                    font-size: 0.8rem;
                     font-weight: 700;
                 }
 
@@ -434,6 +477,7 @@ img {
     .bottom {
         height: 90px;
         justify-content: stretch;
+        gap: 1rem;
         background-color: var(--bg-secondary-color-light);
 
         .left,
@@ -441,6 +485,73 @@ img {
         .right {
             width: 100%;
             height: 100%;
+        }
+
+        .left {
+            padding-left: 0.5rem;
+            align-items: center;
+
+            .track-picture {
+                max-width: 55px;
+                margin-right: 15px;
+            }
+
+            .track-info {
+                flex-direction: column;
+                color: var(--app-color-lighter);
+
+                span {
+                    color: var(--app-color-light);
+                    font-weight: 700;
+                }
+            }
+
+            .track-actions {
+                gap: 10px;
+                font-size: 1.2rem;
+                margin-left: 2rem;
+                color: var(--app-color-light);
+            }
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 5px;
+            background-color: var(--app-color-light);
+            border-radius: 20px;
+
+            .played {
+                width: 30%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                background-color: var(--app-color-lighter);
+                border-radius: 20px;
+            }
+
+            .slider-thumb {
+                position: absolute;
+                display: none;
+                left: 30%;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: var(--app-color-lighter);
+            }
+        }
+
+        .slider:hover {
+            cursor: pointer;
+
+            .played {
+                background-color: var(--app-primary-color);
+            }
+
+            .slider-thumb {
+                display: inline-block;
+                transform: translatex(-7px);
+            }
         }
 
         .center {
@@ -464,51 +575,29 @@ img {
                 align-items: center;
                 gap: 20px;
 
-                .slider {
-                    position: relative;
-                    width: 100%;
-                    height: 5px;
-                    background-color: var(--app-color-light);
-                    border-radius: 20px;
-
-                    .played {
-                        width: 30%;
-                        height: 100%;
-                        display: flex;
-                        align-items: center;
-                        background-color: var(--app-color-lighter);
-                        border-radius: 20px;
-                    }
-
-                    .slider-thumb {
-                        position: absolute;
-                        display: none;
-                        left: 30%;
-                        width: 15px;
-                        height: 15px;
-                        border-radius: 50%;
-                        background-color: var(--app-color-lighter);
-                    }
-                }
-
-                .slider:hover {
-                    cursor: pointer;
-
-                    .played {
-                        background-color: var(--app-primary-color);
-                    }
-
-                    .slider-thumb {
-                        display: inline-block;
-                        transform: translatex(-7px);
-                    }
-                }
-
                 span {
                     font-size: 0.8rem;
                 }
             }
         }
+
+        .right {
+            justify-content: flex-end;
+            align-items: center;
+            color: var(--app-color-lighter);
+            padding-right: 0.5rem;
+
+            .player-actions {
+                align-items: center;
+                gap: 15px;
+            }
+
+            .slider {
+                width: 120px;
+            }
+        }
+
+
     }
 }
 
@@ -703,5 +792,11 @@ main {
                 width: calc(100% - 50px);
             }
         }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .container {
+        padding: 0rem 1rem;
     }
 }
