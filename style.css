@@ -396,6 +396,7 @@ img {
             .top-menu {
                 padding: 1.4rem 0rem;
                 font-size: 0.8rem;
+                font-weight: 700;
 
                 .row {
                     justify-content: center;
@@ -505,6 +506,8 @@ img {
         height: 90px;
         justify-content: stretch;
         gap: 1rem;
+        position: relative;
+        z-index: 1000;
         background-color: var(--bg-secondary-color-light);
 
         .left,
@@ -535,6 +538,12 @@ img {
                 span {
                     color: var(--app-color-light);
                     font-weight: 700;
+                }
+
+                span:hover {
+                    color: var(--app-color-lighter);
+                    text-decoration: underline;
+                    cursor: pointer;
                 }
             }
 
@@ -746,6 +755,14 @@ main {
 
     .col-sm-12 {
         width: calc(100% / 12 * 12);
+    }
+
+    .bottom {
+        .left {
+            .track-actions {
+                flex-direction: column;
+            }
+        }
     }
 }
 
