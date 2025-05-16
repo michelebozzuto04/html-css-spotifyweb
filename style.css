@@ -187,7 +187,7 @@ img {
     overflow: hidden;
 
     .top {
-        height: calc(100% - 70px);
+        height: calc(100% - 90px);
 
         .left {
             width: 230px;
@@ -413,7 +413,7 @@ img {
     }
 
     .bottom {
-        height: 70px;
+        height: 90px;
         justify-content: stretch;
         background-color: var(--bg-secondary-color-light);
 
@@ -422,6 +422,33 @@ img {
         .right {
             width: 100%;
             height: 100%;
+        }
+
+        .center {
+            flex-direction: column;
+            justify-content: space-between;
+            color: white;
+            padding: 0.8rem 0rem;
+
+            .controls {
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                font-size: 1.2rem;
+
+                :nth-of-type(3) {
+                    font-size: 2rem;
+                }
+            }
+
+            .track-slider {
+                gap: 20px;
+
+                #slider {
+                    width: 100%;
+
+                }
+            }
         }
     }
 }
