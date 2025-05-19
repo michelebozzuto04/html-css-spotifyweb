@@ -14,6 +14,7 @@
     .album-picture {
         width: 250px;
         box-shadow: 2px 2px 30px black;
+        flex-shrink: 0;
     }
 
     .album-picture:hover {
@@ -22,6 +23,7 @@
 
     .album-info {
         flex-direction: column;
+        flex-shrink: 1;
         gap: 10px;
 
         h2 {
@@ -248,17 +250,6 @@
 
 @media screen and (max-width: 576px) {
     .album-details {
-        flex-direction: column;
-        font-size: 0.8rem;
-        padding: 2rem 0.5rem;
-        width: 100%;
-
-        .album-picture {
-            justify-content: start;
-        }
-
-        .album-info {
-            width: 90%;
-        }
+        padding-bottom: 0.5rem;
     }
 }
