@@ -456,6 +456,10 @@ img {
                         font-size: 2.5rem;
                         background-color: rgba(0, 0, 0, 0.5);
                     }
+
+                    a {
+                        color: var(--app-color-lighter);
+                    }
                 }
 
                 .card-header:hover {

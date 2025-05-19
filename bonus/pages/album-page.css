@@ -1,1 +1,47 @@
 @import url(../style.css);
+
+.album-details {
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 2rem;
+    background: #56bd42;
+    background: linear-gradient(90deg, rgba(86, 189, 66, 0.107) 0%, rgba(44, 145, 86, 0.16) 50%, rgba(31, 30, 18, 0.495) 100%);
+
+    .album-picture {
+        width: 250px;
+    }
+
+    .album-picture:hover {
+        scale: 105%;
+    }
+
+    .album-info {
+
+        h2 {
+            font-size: 4rem;
+            font-weight: 800;
+        }
+
+        .author {
+            align-items: center;
+            gap: 10px;
+            color: var(--app-color-light);
+
+            img {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background-color: gray;
+            }
+
+            span {
+                font-weight: 400;
+            }
+
+            span:first-of-type {
+                font-weight: 700;
+                color: var(--app-color-lighter);
+            }
+        }
+    }
+}
