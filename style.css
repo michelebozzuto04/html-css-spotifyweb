@@ -215,6 +215,7 @@ img {
         height: calc(100% - 90px);
 
         .left {
+            overflow: hidden;
             width: 230px;
             height: 100%;
             background-color: var(--bg-secondary-color-dark);
@@ -519,8 +520,6 @@ img {
         height: 90px;
         justify-content: stretch;
         gap: 1rem;
-        position: relative;
-        z-index: 1000;
         background-color: var(--bg-secondary-color-light);
 
         .left,
