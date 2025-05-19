@@ -1,11 +1,15 @@
 @import url(../style.css);
 
+.container {
+    background-color: transparent;
+}
+
 .album-details {
     align-items: center;
     gap: 2rem;
     padding: 2rem 2rem;
     background: #56bd42;
-    background: linear-gradient(90deg, rgba(86, 189, 66, 0.107) 0%, rgba(44, 145, 86, 0.16) 50%, rgba(31, 30, 18, 0.495) 100%);
+    background: linear-gradient(180deg, rgba(86, 189, 66, 0.107) 0%, rgba(44, 145, 86, 0.16) 50%, rgba(31, 30, 18, 0) 100%);
 
     .album-picture {
         width: 250px;
@@ -45,4 +49,48 @@
             }
         }
     }
+}
+
+.actions-menu {
+    justify-content: space-between;
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: var(--app-color-light);
+
+    .actions-left {
+        align-items: center;
+        gap: 20px;
+
+
+        i:hover {
+            cursor: pointer;
+            color: var(--app-color-lighter);
+            scale: 105%;
+        }
+
+        .play {
+            font-size: 3.5rem;
+            color: var(--app-primary-color);
+        }
+
+        .play:hover {
+            color: var(--app-primary-color);
+        }
+    }
+
+    .actions-right {
+        align-items: center;
+        gap: 10px;
+        font-size: 0.9rem;
+        font-weight: 600;
+
+        .list:hover {
+            cursor: pointer;
+            color: var(--app-color-lighter);
+        }
+    }
+}
+
+.song-list {
+    .song-list-header {}
 }
