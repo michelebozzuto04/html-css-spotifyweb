@@ -1,0 +1,909 @@
+:root {
+    --app-primary-color: #ADFF2F;
+    --app-color-lighter: #fff;
+    --app-color-light: #7b7e82;
+    --bg-primary-color: #141922;
+    --bg-secondary-color-dark: #000000;
+    --bg-secondary-color-light: #282828;
+    --bg-secondary-color-lighter: #a3a3a3;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Utilities */
+[class*="col"] {
+    padding: 0rem 0.5rem;
+}
+
+.container {
+    padding: 0rem 1.5rem;
+}
+
+.container-sm {
+    max-width: 768px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.row {
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin: 0 -0.5rem;
+}
+
+.col {
+    flex-basis: auto;
+}
+
+.col-lg-1 {
+    width: calc(100% / 12 * 1);
+}
+
+.col-lg-2 {
+    width: calc(100% / 12 * 2);
+}
+
+.col-lg-3 {
+    width: calc(100% / 12 * 3);
+}
+
+.col-lg-4 {
+    width: calc(100% / 12 * 4);
+}
+
+.col-lg-5 {
+    width: calc(100% / 12 * 5);
+}
+
+.col-lg-6 {
+    width: calc(100% / 12 * 6);
+}
+
+.col-lg-7 {
+    width: calc(100% / 12 * 7);
+}
+
+.col-lg-8 {
+    width: calc(100% / 12 * 8);
+}
+
+.col-lg-9 {
+    width: calc(100% / 12 * 9);
+}
+
+.col-lg-10 {
+    width: calc(100% / 12 * 10);
+}
+
+.col-lg-11 {
+    width: calc(100% / 12 * 11);
+}
+
+.col-lg-12 {
+    width: calc(100% / 12 * 12);
+}
+
+.d-flex {
+    display: flex;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.btn:hover {
+    cursor: pointer;
+    scale: 110%;
+}
+
+.btn-outlined {
+    color: var(--app-color-lighter);
+    background-color: transparent;
+    border: 1.5px solid var(--app-color-lighter);
+    border-radius: 30px;
+}
+
+/* Generics */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/* Debug */
+.debug {
+    * {
+        border: 1px dashed black;
+    }
+
+    .wrapper {
+        background-color: red;
+
+        .top {
+            background-color: gray;
+
+            .left {
+                background-color: blue;
+
+                .logo {
+                    background-color: aqua;
+                }
+
+                nav {
+                    .nav-top {
+                        li {
+                            background-color: bisque;
+                            height: 35px;
+                        }
+
+                        .playlists {
+                            span {
+                                background-color: white;
+                            }
+
+                            .create-playlist {
+                                height: 45px;
+                                background-color: azure;
+                            }
+                        }
+                    }
+
+                    .nav-bottom {
+                        .download-app {
+                            height: 20px;
+                            background-color: bisque;
+                        }
+
+                        .user-profile {
+                            height: 40px;
+                            background-color: aquamarine;
+                        }
+                    }
+                }
+            }
+
+            .right {
+                background-color: green;
+
+                .header {
+                    background-color: brown;
+
+                    .upgrade {}
+                }
+
+                .card {
+                    height: 200px;
+                    background-color: chocolate;
+                }
+            }
+        }
+
+        .bottom {
+            background-color: black;
+
+            .left {
+                background-color: cornflowerblue;
+            }
+
+            .center {
+                background-color: crimson;
+            }
+
+            .right {
+                background-color: darkmagenta;
+            }
+        }
+    }
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    .top {
+        height: calc(100% - 90px);
+
+        .left {
+            overflow: hidden;
+            width: 230px;
+            height: 100%;
+            background-color: var(--bg-secondary-color-dark);
+
+            .logo {
+                height: 85px;
+                padding: 1rem;
+
+                .logo-lg {
+                    width: 130px;
+                }
+
+                .logo-sm {
+                    display: none;
+                    width: 28px;
+                }
+            }
+
+            nav {
+                height: 100%;
+                flex-direction: column;
+                justify-content: space-between;
+                color: var(--app-color-lighter);
+
+                .nav-top {
+                    li {
+                        display: flex;
+                        align-items: center;
+                        height: 35px;
+                        padding: 0 1rem;
+                        border-left: 2px solid transparent;
+                    }
+
+                    .navigation {
+                        a {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+                            text-decoration: none;
+                            font-weight: 700;
+                            color: var(--app-color-light);
+
+                            img {
+                                width: 20px;
+                                opacity: 0.5;
+                            }
+                        }
+
+                        a:hover {
+                            color: var(--app-color-lighter);
+
+                            img {
+                                opacity: 1;
+                            }
+                        }
+
+                        li:first-of-type {
+                            border-left: 2px solid var(--app-primary-color);
+
+                            a {
+                                color: var(--app-color-lighter);
+
+                                img {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+
+                    .playlists {
+                        margin-top: 2rem;
+
+                        h2 {
+                            font-size: 1rem;
+                            font-weight: 700;
+                            padding: 0 1rem;
+                        }
+
+                        .create-playlist {
+                            align-items: center;
+                            gap: 8px;
+                            padding: 1rem;
+
+                            .add {
+                                width: 37px;
+                                height: 37px;
+                                justify-content: center;
+                                align-items: center;
+                                color: var(--bg-secondary-color-dark);
+                                background-color: var(--bg-secondary-color-lighter);
+                            }
+
+                            span {
+                                display: flex;
+                                align-items: center;
+                                gap: 8px;
+                                font-weight: 400;
+                                color: var(--app-color-light);
+                            }
+
+                            span:hover {
+                                color: white;
+                                cursor: pointer;
+
+                                .add {
+                                    background-color: var(--app-color-lighter);
+                                }
+                            }
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: var(--app-color-light);
+                        }
+
+                        a:hover {
+                            color: white;
+                        }
+                    }
+                }
+
+                .nav-bottom {
+                    padding: 0rem 1rem;
+
+                    .user-profile {
+                        align-items: center;
+                        gap: 8px;
+                        padding: 1rem 0rem;
+
+                        .user-picture {
+                            background-color: var(--bg-secondary-color-lighter);
+                            border-radius: 50%;
+                            overflow: hidden;
+
+                            img {
+                                width: 25px;
+                                height: 25px;
+                            }
+                        }
+
+                        span {
+                            font-weight: 600;
+                        }
+                    }
+
+                    hr {
+                        border: 1px solid #ffffff75;
+                    }
+
+                    .download-app {
+                        padding: 0.5rem 0;
+
+                        a {
+                            text-decoration: none;
+                            color: var(--app-color-light);
+
+                            img {
+                                width: 20px;
+                                opacity: 0.6;
+                            }
+                        }
+
+                        a:hover {
+                            color: var(--app-color-lighter);
+
+                            img {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .right {
+            width: calc(100% - 230px);
+            height: 100%;
+            overflow-y: auto;
+            background-color: var(--bg-primary-color);
+
+            .header {
+                padding: 1.2rem 1rem;
+                justify-content: flex-end;
+                height: 85px;
+                position: sticky;
+                top: 0;
+                left: 0;
+                margin-right: 5px;
+                z-index: 1000;
+                background-color: rgba(0, 0, 0, 0.5)
+            }
+
+            .top-menu {
+                padding: 1.4rem 0rem;
+                font-size: 0.8rem;
+                font-weight: 700;
+
+                .row {
+                    justify-content: center;
+                    row-gap: 1.2rem;
+                }
+
+                .top-menu-content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-transform: uppercase;
+                    color: var(--app-color-light);
+
+                    hr {
+                        margin: 2px 0;
+                        width: 3rem;
+                        border: 1px solid var(--app-primary-color);
+                    }
+
+                    span:hover {
+                        cursor: pointer;
+                        color: var(--app-color-lighter);
+                    }
+                }
+            }
+
+            .card {
+
+                .card-header {
+                    position: relative;
+
+                    .card-hover {
+                        display: none;
+                        position: absolute;
+                        justify-content: center;
+                        align-items: center;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        font-size: 2.5rem;
+                        background-color: rgba(0, 0, 0, 0.5);
+                    }
+                }
+
+                .card-header:hover {
+                    cursor: pointer;
+
+                    .card-hover {
+                        display: flex;
+                    }
+                }
+
+                .card-body {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 0.6rem;
+                    padding: 1rem 0;
+                    text-align: center;
+                    font-size: 0.7rem;
+
+                    span {
+                        font-weight: 700;
+                        color: var(--app-color-light);
+                    }
+                }
+            }
+
+            .row {
+                width: 100%;
+            }
+
+            .recent {
+                h2 {
+                    padding: 2rem 0rem;
+                }
+            }
+
+            .for-you,
+            .artists {
+                margin-top: 2rem;
+
+                h2 {
+                    padding-bottom: 10px;
+                }
+
+                span {
+                    color: var(--app-color-light);
+                    font-size: 0.8rem;
+                    font-weight: 700;
+                }
+
+                .row {
+                    margin-top: 2rem;
+                }
+
+                .artist-picture {
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    .bottom {
+        height: 90px;
+        justify-content: stretch;
+        gap: 1rem;
+        background-color: var(--bg-secondary-color-light);
+
+        .left,
+        .center,
+        .right {
+            width: 100%;
+            height: 100%;
+        }
+
+        i:hover {
+            cursor: pointer;
+            color: var(--app-color-lighter);
+        }
+
+        .left {
+            padding-left: 0.5rem;
+            align-items: center;
+
+            .track-picture {
+                max-width: 55px;
+                margin-right: 15px;
+            }
+
+            .track-info {
+                flex-direction: column;
+                color: var(--app-color-lighter);
+
+                span {
+                    color: var(--app-color-light);
+                    font-weight: 700;
+                }
+
+                span:hover {
+                    color: var(--app-color-lighter);
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+
+            .track-actions {
+                gap: 10px;
+                font-size: 1.2rem;
+                margin-left: 2rem;
+                color: var(--app-color-light);
+            }
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 5px;
+            background-color: var(--app-color-light);
+            border-radius: 20px;
+
+            .played {
+                width: 30%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                background-color: var(--app-color-lighter);
+                border-radius: 20px;
+            }
+
+            .slider-thumb {
+                position: absolute;
+                display: none;
+                left: 30%;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: var(--app-color-lighter);
+            }
+        }
+
+        .slider:hover {
+            cursor: pointer;
+
+            .played {
+                background-color: var(--app-primary-color);
+            }
+
+            .slider-thumb {
+                display: inline-block;
+                transform: translatex(-7px);
+            }
+        }
+
+        .center {
+            flex-direction: column;
+            justify-content: space-between;
+            color: white;
+            padding: 0.8rem 0rem;
+
+            .controls {
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                font-size: 1.2rem;
+
+                :nth-of-type(3) {
+                    font-size: 2rem;
+                }
+
+                :nth-of-type(3):hover {
+                    scale: 110%;
+                    cursor: pointer;
+                }
+            }
+
+            .track {
+                align-items: center;
+                gap: 20px;
+
+                span {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+
+        .right {
+            justify-content: flex-end;
+            align-items: center;
+            color: var(--app-color-lighter);
+            padding-right: 0.5rem;
+
+            .player-actions {
+                align-items: center;
+                gap: 15px;
+            }
+
+            .slider {
+                width: 120px;
+            }
+        }
+
+
+    }
+}
+
+main {
+    color: white;
+}
+
+
+/* Responsive Rules */
+@media screen and (max-width: 992px) {
+    .col-md-1 {
+        width: calc(100% / 12 * 1);
+    }
+
+    .col-md-2 {
+        width: calc(100% / 12 * 2);
+    }
+
+    .col-md-3 {
+        width: calc(100% / 12 * 3);
+    }
+
+    .col-md-4 {
+        width: calc(100% / 12 * 4);
+    }
+
+    .col-md-5 {
+        width: calc(100% / 12 * 5);
+    }
+
+    .col-md-6 {
+        width: calc(100% / 12 * 6);
+    }
+
+    .col-md-7 {
+        width: calc(100% / 12 * 7);
+    }
+
+    .col-md-8 {
+        width: calc(100% / 12 * 8);
+    }
+
+    .col-md-9 {
+        width: calc(100% / 12 * 9);
+    }
+
+    .col-md-10 {
+        width: calc(100% / 12 * 10);
+    }
+
+    .col-md-11 {
+        width: calc(100% / 12 * 11);
+    }
+
+    .col-md-12 {
+        width: calc(100% / 12 * 12);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .col-sm-1 {
+        width: calc(100% / 12 * 1);
+    }
+
+    .col-sm-2 {
+        width: calc(100% / 12 * 2);
+    }
+
+    .col-sm-3 {
+        width: calc(100% / 12 * 3);
+    }
+
+    .col-sm-4 {
+        width: calc(100% / 12 * 4);
+    }
+
+    .col-sm-5 {
+        width: calc(100% / 12 * 5);
+    }
+
+    .col-sm-6 {
+        width: calc(100% / 12 * 6);
+    }
+
+    .col-sm-7 {
+        width: calc(100% / 12 * 7);
+    }
+
+    .col-sm-8 {
+        width: calc(100% / 12 * 8);
+    }
+
+    .col-sm-9 {
+        width: calc(100% / 12 * 9);
+    }
+
+    .col-sm-10 {
+        width: calc(100% / 12 * 10);
+    }
+
+    .col-sm-11 {
+        width: calc(100% / 12 * 11);
+    }
+
+    .col-sm-12 {
+        width: calc(100% / 12 * 12);
+    }
+
+    .bottom {
+        .left {
+            .track-actions {
+                flex-direction: column;
+            }
+        }
+
+        .right {
+
+            .player-actions {
+                gap: 8px;
+
+                .slider {
+                    width: 90px;
+                }
+            }
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 600px) {
+    .bottom {
+        .right {
+            .player-actions {
+
+                .slider {
+                    width: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .wrapper {
+        .top {
+            .left {
+                width: 50px;
+                height: 100%;
+
+                .logo {
+                    justify-content: center;
+                    align-items: center;
+                    height: 40px;
+                    padding: 0.5rem 0.4rem;
+
+                    .logo-lg {
+                        display: none;
+                    }
+
+                    .logo-sm {
+                        display: inline-block;
+                    }
+                }
+
+                .playlists {
+                    display: none;
+                }
+
+                nav {
+                    .nav-top {
+                        li {
+                            padding: 0.5rem 0.4rem;
+                            height: 35px;
+                            justify-content: center;
+                        }
+
+                        .navigation {
+                            a {
+                                span {
+                                    display: none;
+                                }
+                            }
+
+                            li:first-of-type {
+                                border-left: transparent;
+                            }
+                        }
+                    }
+
+                    .nav-bottom {
+                        padding: 0 0.5rem;
+
+                        .user-profile {
+                            justify-content: center;
+
+                            span {
+                                display: none;
+                            }
+                        }
+
+                        hr {
+                            display: none;
+                        }
+
+                        .download-app {
+                            display: flex;
+                            justify-content: center;
+
+                            a {
+                                span {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .right {
+                width: calc(100% - 50px);
+            }
+        }
+
+        .bottom {
+            .left {
+
+                .track-info {
+                    display: none;
+                }
+
+                .track-actions {
+                    margin-left: 0.3rem;
+                }
+            }
+
+            .right {
+                .slider {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .container {
+        padding: 0rem 1rem;
+    }
+}
