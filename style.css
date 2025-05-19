@@ -246,6 +246,7 @@ img {
                         align-items: center;
                         height: 35px;
                         padding: 0 1rem;
+                        border-left: 2px solid transparent;
                     }
 
                     .navigation {
