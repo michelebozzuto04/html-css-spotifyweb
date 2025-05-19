@@ -53,6 +53,7 @@
 
 .actions-menu {
     justify-content: space-between;
+    align-items: center;
     margin-top: 2rem;
     font-size: 2rem;
     color: var(--app-color-light);
@@ -92,5 +93,90 @@
 }
 
 .song-list {
-    .song-list-header {}
+    .song-list-header {
+        justify-content: space-between;
+        margin-top: 2rem;
+        padding: 0rem 3rem 0rem 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 0.2px solid var(--app-color-light);
+        color: var(--app-color-light);
+
+        .title {
+            gap: 20px;
+            font-weight: 600;
+        }
+    }
+
+    .song-list-body {
+        li {
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2.5rem 1rem 1rem;
+            margin: 0.5rem 0rem;
+            color: var(--app-color-light);
+            font-weight: 500;
+
+            .list-left {
+                align-items: center;
+                gap: 20px;
+
+                .fa-play {
+                    display: none;
+                    color: var(--app-color-lighter);
+                }
+
+                .song-info {
+                    flex-direction: column;
+                    gap: 5px;
+
+                    .song-title {
+                        color: var(--app-color-lighter);
+                    }
+                }
+            }
+
+            .list-right {
+                .fa-plus {
+                    display: none;
+                    color: var(--app-color-light);
+                    margin-right: 10px;
+                }
+
+                .fa-plus:hover {
+                    color: var(--app-color-lighter);
+                }
+            }
+        }
+
+        li:hover {
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.112);
+            border-radius: 10px;
+
+            .list-left {
+                .fa-play {
+                    display: inline-block;
+                }
+
+                .song-order {
+                    display: none;
+                }
+
+                .song-info {
+
+                    .song-title,
+                    .song-author {
+                        color: var(--app-color-lighter);
+                    }
+                }
+            }
+
+            .list-right {
+                .fa-plus {
+                    display: inline-block;
+                }
+            }
+        }
+
+    }
 }

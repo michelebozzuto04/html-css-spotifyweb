@@ -20,13 +20,15 @@
                 <nav class="d-flex">
                     <div class="nav-top">
                         <div class="logo d-flex">
-                            <img class="logo-lg" src="../../img/logo.svg" alt="spotify logo">
-                            <img class="logo-sm" src="../img/logo-small.svg" alt="spotify logo">
+                            <a href="../index.html">
+                                <img class="logo-lg" src="../../img/logo.svg" alt="spotify logo">
+                                <img class="logo-sm" src="../../img/logo-small.svg" alt="spotify logo">
+                            </a>
                         </div>
                         <div class="navigation">
                             <ul class="navigation">
                                 <li>
-                                    <a href="#">
+                                    <a href="../index.html">
                                         <img src="../../img/home.svg" alt="home icon">
                                         <span>Home</span>
                                     </a>
@@ -137,13 +139,33 @@
                     <!-- Song List -->
                     <div class="song-list">
                         <div class="song-list-header d-flex">
-                            <div class="title">
+                            <div class="title d-flex">
                                 #
                                 <span>Titolo</span>
                             </div>
                             <div class="duration">
                                 <i class="fa-regular fa-clock"></i>
                             </div>
+                        </div>
+                        <div class="song-list-body">
+                            <ul>
+                                <li class="d-flex">
+                                    <div class="list-left d-flex">
+                                        <span class="song-order">1</span>
+                                        <i class="fa-solid fa-play"></i>
+                                        <div class="song-info d-flex">
+                                            <span class="song-title">Song title</span>
+                                            <span class="song-author">AUTHOR</span>
+                                        </div>
+                                    </div>
+                                    <div class="list-right">
+                                        <i class="fa-solid fa-plus"></i>
+                                        <span class="song-duration">
+                                            2:35
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
 
